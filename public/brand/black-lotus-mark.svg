@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 312" role="img" aria-label="Black Lotus">
+  <defs>
+    <linearGradient id="outerL-d" x1="0" y1="0" x2="1" y2="0.4">
+      <stop offset="0" stop-color="#B5862A"/><stop offset="1" stop-color="#E0B453"/>
+    </linearGradient>
+    <linearGradient id="outerR-d" x1="1" y1="0" x2="0" y2="0.4">
+      <stop offset="0" stop-color="#B5862A"/><stop offset="1" stop-color="#E0B453"/>
+    </linearGradient>
+    <linearGradient id="bar-d" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C9982F"/><stop offset="0.5" stop-color="#F2D27A"/><stop offset="1" stop-color="#C9982F"/>
+    </linearGradient>
+  </defs>
+  <mask id="mOuter-d" maskUnits="userSpaceOnUse" x="-10" y="-10" width="420" height="330">
+    <rect x="-10" y="-10" width="420" height="330" fill="#fff"/>
+    <g fill="none" stroke="#000" stroke-width="11" stroke-linejoin="round">
+      <path transform="rotate(-40 200 230)" d="M200 36 C210 60 236 104 236 150 C236 190 220 214 200 230 C180 214 164 190 164 150 C164 104 190 60 200 36 Z"/><path transform="rotate(40 200 230)" d="M200 36 C210 60 236 104 236 150 C236 190 220 214 200 230 C180 214 164 190 164 150 C164 104 190 60 200 36 Z"/><path d="M200 4 C220 44 250 98 246 150 C242 190 222 212 200 230 C178 212 158 190 154 150 C150 98 180 44 200 4 Z"/>
+    </g>
+  </mask>
+  <mask id="mInner-d" maskUnits="userSpaceOnUse" x="-10" y="-10" width="420" height="330">
+    <rect x="-10" y="-10" width="420" height="330" fill="#fff"/>
+    <path fill="none" stroke="#000" stroke-width="11" stroke-linejoin="round" d="M200 4 C220 44 250 98 246 150 C242 190 222 212 200 230 C178 212 158 190 154 150 C150 98 180 44 200 4 Z"/>
+  </mask>
+  <g mask="url(#mOuter-d)">
+    <path fill="url(#outerL-d)" d="M6 131 C50 124 100 132 140 170 C165 194 185 215 196 234 C150 238 95 230 60 205 C32 186 16 160 6 131 Z"/>
+    <path fill="url(#outerR-d)" d="M394 131 C350 124 300 132 260 170 C235 194 215 215 204 234 C250 238 305 230 340 205 C368 186 384 160 394 131 Z"/>
+  </g>
+  <g mask="url(#mInner-d)">
+    <path fill="#EDC86E" transform="rotate(-40 200 230)" d="M200 36 C210 60 236 104 236 150 C236 190 220 214 200 230 C180 214 164 190 164 150 C164 104 190 60 200 36 Z"/>
+    <path fill="#EDC86E" transform="rotate(40 200 230)" d="M200 36 C210 60 236 104 236 150 C236 190 220 214 200 230 C180 214 164 190 164 150 C164 104 190 60 200 36 Z"/>
+  </g>
+  <path fill="#F4D47F" d="M200 4 C220 44 250 98 246 150 C242 190 222 212 200 230 C178 212 158 190 154 150 C150 98 180 44 200 4 Z"/>
+  <g fill="url(#bar-d)">
+    <polygon points="93,251 307,251 298,264 102,264"/>
+    <polygon points="120,277 280,277 273,288 127,288"/>
+    <polygon points="151,300 249,300 244,310 156,310"/>
+  </g>
+</svg>

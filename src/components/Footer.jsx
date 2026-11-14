@@ -10,12 +10,7 @@ export default function Footer({ lang }) {
       <div className="mx-auto max-w-7xl">
         <div className="grid items-start gap-10 sm:grid-cols-[1fr_auto_auto]">
           <div>
-            <div className="mb-4 flex items-center gap-3">
-              <div className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-amber-200 via-amber-400 to-stone-900">
-                <span className="text-sm font-black text-black">BL</span>
-              </div>
-              <p className="text-sm font-black uppercase tracking-[0.2em]">Black Lotus Foundation</p>
-            </div>
+            <img src="/brand/black-lotus-logo.svg" alt="Black Lotus Foundation" className="mb-5 h-28 w-auto" width="129" height="112" />
             <p className="max-w-xs text-sm leading-7 text-stone-500">{t.footer}</p>
           </div>
           <div className="grid gap-3 text-sm">

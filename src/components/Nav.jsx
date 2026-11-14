@@ -10,12 +10,10 @@ export default function Nav({ lang, setLang }) {
   return (
     <header className="sticky top-0 z-50 border-b border-white/[0.07] bg-black/50 backdrop-blur-2xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        <a href="#top" className="group flex items-center gap-3">
-          <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-amber-200 via-amber-400 to-stone-900 shadow-lg shadow-amber-900/40 transition group-hover:shadow-amber-700/50">
-            <span className="text-base font-black text-black">BL</span>
-          </div>
+        <a href="#top" className="group flex items-center gap-3" aria-label="Black Lotus Foundation home">
+          <img src="/brand/black-lotus-mark.svg" alt="" className="h-10 w-auto transition group-hover:scale-105" width="51" height="40" />
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.25em]">Black Lotus</p>
+            <p className="font-cinzel text-[15px] font-semibold uppercase tracking-[0.18em]">Black Lotus</p>
             <p className="text-[10px] uppercase tracking-widest text-amber-300/70">Rise. Rebuild. Reinvest.</p>
           </div>
         </a>
@@ -55,7 +53,10 @@ export default function Nav({ lang, setLang }) {
             className="fixed inset-0 z-50 bg-black/98 p-6 backdrop-blur-2xl lg:hidden"
           >
             <div className="flex items-center justify-between">
-              <p className="font-black uppercase tracking-[0.25em] text-amber-200">Black Lotus</p>
+              <div className="flex items-center gap-3">
+                <img src="/brand/black-lotus-mark.svg" alt="" className="h-8 w-auto" width="41" height="32" />
+                <p className="font-cinzel font-semibold uppercase tracking-[0.18em] text-amber-200">Black Lotus</p>
+              </div>
               <button onClick={() => setOpen(false)} className="rounded-full border border-white/15 p-2">
                 <X className="h-5 w-5" />
               </button>
