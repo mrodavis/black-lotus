@@ -1,5 +1,6 @@
 import { ArrowRight, MapPin, ShieldCheck, Zap } from "lucide-react";
 import { copy } from "../constants/copy";
+import { mailto } from "../constants/data";
 import GradientOrb from "./shared/GradientOrb";
 import SectionLabel from "./shared/SectionLabel";
 
@@ -18,9 +19,9 @@ export default function NationalMovementSection({ lang }) {
             <p className="mx-auto mt-6 max-w-2xl text-xl text-stone-300">{t.movementText}</p>
             <div className="mt-12 grid gap-6 sm:grid-cols-3">
               {[
-                { icon: MapPin,      label: "Scalable Nationally", sub: "Designed for city, state, and federal partnerships" },
-                { icon: ShieldCheck, label: "Policy-Aligned",      sub: "DOJ, DOL, and foundation grant standards"          },
-                { icon: Zap,         label: "Tech-Enabled",        sub: "AI-assisted, mobile-first, data-driven impact"     },
+                { icon: MapPin,      label: "Built to Scale",      sub: "Starting on Long Island and in NYC, designed to grow" },
+                { icon: ShieldCheck, label: "Transparent",         sub: "Outcomes reported to partners from day one"        },
+                { icon: Zap,         label: "Tech-Enabled",        sub: "Mobile-first learning and progress tracking"       },
               ].map(({ icon: Icon, label, sub }) => (
                 <div key={label} className="rounded-[1.5rem] border border-white/10 bg-black/30 p-6 backdrop-blur">
                   <Icon className="mx-auto mb-4 h-7 w-7 text-amber-300" />
@@ -37,7 +38,7 @@ export default function NationalMovementSection({ lang }) {
                 Fund the Movement <ArrowRight className="h-5 w-5" />
               </a>
               <a
-                href="mailto:partnerships@blacklotus.org"
+                href={mailto("Partnership inquiry")}
                 className="inline-flex items-center justify-center gap-3 rounded-full border border-white/20 px-8 py-4 font-bold transition hover:border-white/40"
               >
                 Partner With Us

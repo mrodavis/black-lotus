@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Award, GraduationCap, HeartHandshake, BookOpen } from "lucide-react";
 import { copy } from "../constants/copy";
+import { mailto } from "../constants/data";
 import GradientOrb from "./shared/GradientOrb";
 import SectionLabel from "./shared/SectionLabel";
 
@@ -200,13 +201,13 @@ export default function SponsorCalculator({ lang }) {
             {/* CTAs */}
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
-                href="mailto:info@blacklotus.org"
+                href={mailto("Founding gift")}
                 className="group inline-flex flex-1 items-center justify-center gap-3 rounded-full bg-amber-300 px-7 py-4 font-black text-black shadow-xl shadow-amber-950/30 transition-all hover:scale-[1.02] hover:bg-white"
               >
                 {t.sponsorCta} <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href="mailto:partnerships@blacklotus.org"
+                href={mailto("Partnership inquiry")}
                 className="inline-flex items-center justify-center gap-3 rounded-full border border-white/15 px-7 py-4 font-bold transition-all hover:border-amber-300/40 hover:text-amber-200"
               >
                 {t.partnerCta}

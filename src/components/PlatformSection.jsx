@@ -16,12 +16,13 @@ export default function PlatformSection({ lang }) {
           <div className="relative grid items-start gap-14 lg:grid-cols-2">
             <div>
               <SectionLabel>Platform</SectionLabel>
+              <span className="mb-4 ml-2 inline-block rounded-full border border-white/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-stone-400">{lang === "en" ? "In development" : "En desarrollo"}</span>
               <h2 className="text-4xl font-black tracking-tight sm:text-5xl">{t.platformTitle}</h2>
               <p className="mt-6 text-lg leading-8 text-stone-300">{t.platformText}</p>
               <div className="mt-10 grid gap-4">
                 {[
                   { icon: Globe2,      label: "Mobile-first PWA",          sub: "Works offline, installs like a native app"         },
-                  { icon: LockKeyhole, label: "Encrypted PII + Role Access",sub: "HIPAA-adjacent data protection"                   },
+                  { icon: LockKeyhole, label: "Encrypted PII + Role Access",sub: "Privacy-first participant data"                   },
                   { icon: Languages,   label: "English / Spanish UX",       sub: "Fully bilingual, culturally aware"                 },
                   { icon: Zap,         label: "AI-assisted matching",       sub: "Connects participants to best-fit opportunities"   },
                 ].map(({ icon: Icon, label, sub }) => (

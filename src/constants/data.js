@@ -1,16 +1,20 @@
 import {
   GraduationCap, Briefcase, HeartHandshake, BookOpen, Users, Target,
   ShieldCheck, Globe2, Zap, BarChart3, Award, Heart, TrendingUp,
-  LockKeyhole, MapPin, Star,
+  LockKeyhole, MapPin, Star, HardHat, Lightbulb,
 } from "lucide-react";
 
+// Where inquiries go until a foundation domain inbox is set up.
+export const CONTACT_EMAIL = "theblacklotusinstitute@gmail.com";
+export const mailto = (subject) => `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}`;
+
 export const programs = [
-  { icon: GraduationCap, color: "from-amber-400 to-yellow-600",  title: "Training Pathways",       esTitle: "Rutas de Capacitación",           text: "Career readiness, certifications, apprenticeships, and skill-building mapped to real employer needs.",                    esText: "Preparación laboral, certificaciones, aprendizajes y habilidades conectadas con necesidades reales.",           tag: "Education"   },
-  { icon: Briefcase,     color: "from-violet-400 to-purple-700", title: "Second-Chance Jobs",       esTitle: "Empleos de Segunda Oportunidad",   text: "Employer partnerships, job matching, retention support, and progress tracking after placement.",                        esText: "Alianzas con empleadores, matching laboral, apoyo de retención y seguimiento post-colocación.",                 tag: "Employment"  },
-  { icon: HeartHandshake,color: "from-emerald-400 to-teal-700",  title: "Mentorship & Case Support",esTitle: "Mentoría y Apoyo de Caso",         text: "Mentor pairing, milestone tracking, SMS reminders, barriers support, and human guidance.",                             esText: "Parejas de mentoría, seguimiento de metas, recordatorios SMS, apoyo con barreras y guía humana.",               tag: "Mentorship"  },
-  { icon: BookOpen,      color: "from-sky-400 to-blue-700",      title: "Scholarship Fund",         esTitle: "Fondo de Becas",                   text: "Merit and need-based scholarships connecting participants to higher education and credentialing.",                      esText: "Becas por mérito y necesidad conectando participantes con educación superior y acreditaciones.",                tag: "Education"   },
-  { icon: Users,         color: "from-rose-400 to-red-700",      title: "Youth Empowerment",        esTitle: "Empoderamiento Juvenil",           text: "After-school programs, leadership development, and early intervention for underprivileged youth.",                     esText: "Programas extracurriculares, desarrollo de liderazgo e intervención temprana para jóvenes.",                   tag: "Youth"       },
-  { icon: Target,        color: "from-orange-400 to-amber-700",  title: "Reentry Navigation",       esTitle: "Navegación de Reingreso",          text: "Housing, ID recovery, benefits access, family reunification, and comprehensive barrier removal.",                      esText: "Vivienda, recuperación de ID, acceso a beneficios, reunificación familiar y eliminación de barreras.",          tag: "Reentry"     },
+  { icon: HardHat,       color: "from-amber-400 to-yellow-600",  title: "Skilled Trades Academy",     esTitle: "Academia de Oficios",              text: "Hands-on pathways into construction, electrical, plumbing, HVAC, CDL, welding, and solar, with safety credentials built in.", esText: "Rutas prácticas hacia construcción, electricidad, plomería, HVAC, CDL, soldadura y energía solar, con credenciales de seguridad incluidas.", tag: "Education" },
+  { icon: Briefcase,     color: "from-violet-400 to-purple-700", title: "Second-Chance Jobs",         esTitle: "Empleos de Segunda Oportunidad",   text: "Employer partnerships, internships, job training, and placement support that keeps going after day one.",                 esText: "Alianzas con empleadores, pasantías, capacitación laboral y apoyo de colocación que continúa después del primer día.",   tag: "Employment" },
+  { icon: Lightbulb,     color: "from-sky-400 to-blue-700",      title: "Entrepreneurship Lab",       esTitle: "Laboratorio de Emprendimiento",    text: "Business planning, digital marketing, app development, cybersecurity, and project management for founders in the making.", esText: "Planificación de negocios, marketing digital, desarrollo de apps, ciberseguridad y gestión de proyectos para futuros fundadores.", tag: "Entrepreneurship" },
+  { icon: HeartHandshake,color: "from-emerald-400 to-teal-700",  title: "Mentorship & Life Coaching", esTitle: "Mentoría y Coaching de Vida",      text: "One-on-one coaching, group workshops, and mentors who walk with participants through every milestone.",                    esText: "Coaching individual, talleres grupales y mentores que acompañan a los participantes en cada etapa.",                     tag: "Personal Growth" },
+  { icon: BookOpen,      color: "from-rose-400 to-red-700",      title: "Scholarships",               esTitle: "Becas",                            text: "Scholarships that connect participants to colleges, universities, and credentialing programs.",                          esText: "Becas que conectan a los participantes con colegios, universidades y programas de acreditación.",                      tag: "Education" },
+  { icon: Target,        color: "from-orange-400 to-amber-700",  title: "Reentry Navigation",         esTitle: "Navegación de Reingreso",          text: "Support with IDs, housing, benefits, and the practical barriers that stand between second-chance citizens and work.",     esText: "Apoyo con identificaciones, vivienda, beneficios y las barreras prácticas que separan a los ciudadanos de segunda oportunidad del trabajo.", tag: "Reentry" },
 ];
 
 export const platformFeatures = [
@@ -28,13 +32,14 @@ export const platformFeatures = [
   { icon: Star,          label: "Offline-ready PWA"            },
 ];
 
-export const impactMetrics = [
-  { label: "Job Placements",       value: "500+",  sub: "and growing"          },
-  { label: "Training Completions", value: "850+",  sub: "certifications issued" },
-  { label: "Mentorship Hours",     value: "12K+",  sub: "logged this year"     },
-  { label: "Scholarship Awards",   value: "$2.4M", sub: "disbursed"            },
-  { label: "Barriers Resolved",    value: "3,200+",sub: "cases closed"         },
-  { label: "Retention at 180 Days",value: "70%",   sub: "goal exceeded"        },
+// From the business plan's evaluation section. We report these publicly once programs launch.
+export const measures = [
+  { label: "Participation rate",          es: "Tasa de participación" },
+  { label: "Program retention",           es: "Retención en el programa" },
+  { label: "Job placement",               es: "Colocación laboral" },
+  { label: "Employment retention",        es: "Retención en el empleo" },
+  { label: "Credentials earned",          es: "Credenciales obtenidas" },
+  { label: "Lotus level advancement",     es: "Avance de nivel Lotus" },
 ];
 
 export const donationTiers = [
@@ -137,3 +142,45 @@ export const impactRates = {
   mentorshipPair:  1500,
   fullScholarship: 5000,
 };
+
+// Black Lotus Academy: launch tracks. Status is honest: in development until enrollment opens.
+export const academyTracks = [
+  { code: "CON", title: "Construction Core", es: "Construcción Básica", modules: ["Site safety and OSHA 30", "Tools and materials", "Blueprint reading", "Carpentry and framing basics"] },
+  { code: "MEP", title: "Electrical, Plumbing & HVAC", es: "Electricidad, Plomería y HVAC", modules: ["Electrical fundamentals and code basics", "Residential plumbing systems", "HVAC fundamentals and EPA 608 prep", "Troubleshooting and service calls"] },
+  { code: "CDL", title: "CDL & Logistics", es: "CDL y Logística", modules: ["CDL permit prep", "Pre-trip inspection", "Route planning for trucks", "Hauling and junk removal operations"] },
+  { code: "WSL", title: "Welding & Solar Install", es: "Soldadura e Instalación Solar", modules: ["Welding safety and processes", "Metal fabrication basics", "Solar PV fundamentals", "Rooftop install and safety"] },
+];
+
+// Carried over from the BEOC Digital Skills Portal.
+export const academyFoundations = [
+  { code: "OSHA", title: "OSHA 30 w/ Site Safety and Flagging", es: "OSHA 30 con Seguridad y Señalización" },
+  { code: "SGT",  title: "Security Guard Training", es: "Capacitación de Guardia de Seguridad" },
+  { code: "MO",   title: "Microsoft Office", es: "Microsoft Office" },
+  { code: "GW",   title: "Google Workspace", es: "Google Workspace" },
+  { code: "TYP",  title: "Typing Lab", es: "Laboratorio de Mecanografía" },
+  { code: "OAP",  title: "Office Administrative Professional", es: "Profesional Administrativo de Oficina" },
+  { code: "CR",   title: "Career Readiness", es: "Preparación Profesional" },
+];
+
+// The Lotus Path, from the business plan's ranking system.
+export const lotusLevels = [
+  { name: "White",        hex: "#F5F1E8", band: "New applicant",     roles: "Starting the journey" },
+  { name: "Red",          hex: "#D94A3D", band: "$20k–$40k",        roles: "Service, physical labor, custodial, landscaping, security" },
+  { name: "Orange",       hex: "#E8862E", band: "$40k–$60k",        roles: "Customer service, desk agent, equipment operator" },
+  { name: "Yellow",       hex: "#E9C33A", band: "$60k–$80k",        roles: "Managerial, education, trainer" },
+  { name: "Green",        hex: "#3FA36B", band: "$80k–$100k",       roles: "Technical, engineering, sales, marketing" },
+  { name: "Blue",         hex: "#3A78D8", band: "$100k–$120k",      roles: "Business development, leadership, specialist" },
+  { name: "Indigo",       hex: "#5B4BD6", band: "$120k–$140k",      roles: "Programmer, cybersecurity, consultant" },
+  { name: "Purple",       hex: "#8A45C9", band: "$140k–$160k",      roles: "Solopreneur, politician, professor" },
+  { name: "Black",        hex: "#1A1A1A", band: "$160k–$180k",      roles: "Project manager, executive" },
+  { name: "Double Black", hex: "#0B0B0B", band: "$200k–$500k",      roles: "Doctor, lawyer, owner" },
+  { name: "Obsidian",     hex: "#2A2233", band: "$1M+",             roles: "Investors, athletes, celebrities" },
+];
+
+export const donorLevels = [
+  { name: "Bronze Lotus",   amount: "$10K" },
+  { name: "Silver Lotus",   amount: "$50K" },
+  { name: "Gold Lotus",     amount: "$100K" },
+  { name: "Platinum Lotus", amount: "$500K" },
+  { name: "Diamond Lotus",  amount: "$1M" },
+];

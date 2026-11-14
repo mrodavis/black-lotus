@@ -1,23 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { copy } from "../constants/copy";
-import { useCountUp } from "../hooks/useCountUp";
-
-function AnimatedStat({ value, label, inView }) {
-  const display = useCountUp(value, inView);
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6 }}
-      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition-all duration-500 hover:border-amber-400/30"
-    >
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-400/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-      <p className="text-4xl font-black tracking-tight text-amber-200 lg:text-5xl">{display}</p>
-      <p className="mt-2 text-sm text-stone-400">{label}</p>
-    </motion.div>
-  );
-}
 
 export default function StatsSection({ lang }) {
   const t = copy[lang];
@@ -27,14 +10,17 @@ export default function StatsSection({ lang }) {
   return (
     <section ref={ref} className="px-5 py-10 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {t.stats.map(([value, label], i) => (
+        {t.pillars.map(([title, sub], i) => (
           <motion.div
-            key={label}
+            key={title}
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: i * 0.1 }}
+            className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition-all duration-500 hover:border-amber-400/30"
           >
-            <AnimatedStat value={value} label={label} inView={inView} />
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-300/80">0{i + 1}</p>
+            <p className="mt-3 text-2xl font-black tracking-tight text-white lg:text-3xl">{title}</p>
+            <p className="mt-2 text-sm text-stone-400">{sub}</p>
           </motion.div>
         ))}
       </div>

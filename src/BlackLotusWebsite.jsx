@@ -6,7 +6,8 @@ import MissionSection from "./components/MissionSection";
 import ProgramsSection from "./components/ProgramsSection";
 import PlatformSection from "./components/PlatformSection";
 import ImpactSection from "./components/ImpactSection";
-import StoriesSection from "./components/StoriesSection";
+import AcademySection from "./components/AcademySection";
+import LotusPathSection from "./components/LotusPathSection";
 import FounderTimeline from "./components/FounderTimeline";
 import NationalMovementSection from "./components/NationalMovementSection";
 import SponsorCalculator from "./components/SponsorCalculator";
@@ -31,9 +32,10 @@ export default function BlackLotusWebsite() {
       <StatsSection lang={lang} />
       <MissionSection lang={lang} />
       <ProgramsSection lang={lang} />
+      <AcademySection lang={lang} />
+      <LotusPathSection lang={lang} />
       <PlatformSection lang={lang} />
       <ImpactSection lang={lang} />
-      <StoriesSection lang={lang} />
       <FounderTimeline lang={lang} />
       <NationalMovementSection lang={lang} />
       <SponsorCalculator lang={lang} />
