@@ -12,7 +12,7 @@ export default function HeroSection({ lang }) {
       <GradientOrb className="left-[-15rem] top-0 h-[40rem] w-[40rem] bg-amber-500/10" />
       <GradientOrb className="right-[-10rem] top-10 h-[35rem] w-[35rem] bg-violet-600/10" />
 
-      <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
         {/* Left: Copy */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <motion.div
@@ -90,7 +90,7 @@ export default function HeroSection({ lang }) {
                 <p className="text-xs font-bold uppercase tracking-[0.3em] text-amber-300">{t.lotusLabel}</p>
                 <p className="mt-1 text-xl font-black">{lang === "en" ? "From White Lotus to Obsidian" : "De Loto Blanco a Obsidiana"}</p>
               </div>
-              <div className="grid gap-2 p-5">
+              <div className="grid grid-cols-1 gap-2 p-5">
                 {lotusLevels.slice(0, 7).map((lvl, i) => (
                   <motion.div
                     key={lvl.name}
